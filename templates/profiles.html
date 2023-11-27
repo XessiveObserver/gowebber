@@ -1,0 +1,14 @@
+{{define "title"}}All Profiles{{end}}
+{{ define "content" }}
+<div class="row col-sm-4 d-flex flex-column justify-content-center align-items-center">
+    <h2 class="shadow-none p-3 mt-3 bg-light text-center rounded">List of Profiles</h2>
+    <ul class="list-group list-group-flush py-2">
+        {{ range .Profiles}}
+        <li class="list-group-item shadow-none bg-light">
+            {{ .Name }} - <a class=" btn btn-link" href="/profile?id={{ .ID }}">View More</a>
+        </li>
+        {{ end }}
+    </ul>
+    <a href="/addprofile" class="btn btn-primary col-12">Add a Profile</a>
+</div>
+{{ end }}

@@ -1,0 +1,15 @@
+{{define "title"}}Add Profile{{end}}
+{{ define "content" }}
+<div class="row col-sm-4 m-3 d-flex flex-column justify-content-center">
+    <h2 class="shadow-none bg-light rounded text-center p-3">Add a Profile</h2>
+    <form action="/addprofile" method="post" class="my-2 ">
+        <label for="name" class="form-label">Name:</label>
+        <input class="form-control" type="text" name="name" id="name" required><br>
+        <label for="name" class="form-label">Age:</label>
+        <input class="form-control" type="text" name="age" id="age" required><br>
+        <label for="name" class="form-label">Occupation:</label>
+        <input class="form-control" type="text" name="occupation" id="occupation" required><br>
+        <input type="submit" value="Add" class="btn btn-primary col-12">
+    </form>
+</div>
+{{ end }}

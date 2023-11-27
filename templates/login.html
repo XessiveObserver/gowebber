@@ -1,0 +1,17 @@
+{{ define "title" }} Login {{ end }}
+{{ define "content" }}
+<div class="row col-sm-4 m-3 d-flex flex-column justify-content-center align-items-center">
+    <h2 class="shadow-none p-3 mt-3 bg-light rounded text-center">Login</h2>
+    <form method="post" action="/login">
+        <label for="username" class="form-label">Username:</label>
+        <input class="form-control" type="text" id="username" name="username" required>
+        <label for="password" class="form-label">Password:</label>
+        <input class="form-control" type="password" id="password" name="password" required>
+        <br>
+        <input type="submit" value="Login" class="btn btn-success col-12 m-1">
+    </form>
+    <p class="d-flex flex-inline">
+        <a href="/register">Don't have an account? Register here</a>
+    </p>
+</div>
+{{ end }}

@@ -1,0 +1,15 @@
+{{define "title"}} Delete - {{ .Profile.Name }}'s Profile {{end}}
+{{ define "content" }}
+<div class="row col-sm-4 m-3 d-flex flex-column justify-content-center align-items-center">
+    <h2 class="shadow-none p-3 mt-3 bg-light rounded text-center text-danger">Delete Profile</h2>
+    <p class="text-danger">Are you sure you want to delete the following profile?</p>
+    <p> <b>Name:</b> {{ .Profile.Name }}</p>
+    <form action="/deleteprofile" method="post">
+        <input type="hidden" name="id" value="{{ .Profile.ID }}">
+        <p class="d-flex flex-inline">
+            <input type="submit" value="Delete" class="btn btn-danger col-6 m-1">
+            <a href="/profiles" class="btn btn-dark col-6 m-1">Cancel</a>
+        </p>
+    </form>
+</div>
+{{ end }}

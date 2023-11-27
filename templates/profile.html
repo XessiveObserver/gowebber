@@ -1,0 +1,14 @@
+{{define "title"}} {{ .Profile.Name }}'s Details {{end}}
+{{ define "content" }}
+    <div class="row col-sm-6 d-flex flex-column justify-content-center align-items-center">
+        <h2 class="shadow-none p-3 mt-3 bg-light text-center rounded">{{ .Profile.Name }}'s Details</h2>
+        <p><b>Name:</b> {{ .Profile.Name }}</p>
+        <p><b>Name:</b> {{ .Profile.Age }}</p>
+        <p><b>Name:</b> {{ .Profile.Occupation }}</p>
+        <p class="col-sm d-flex flex-inline">
+            <a href="/profiles" class="btn btn-dark col-3 m-1">Back to List</a>
+            <a href="/editprofile?id={{ .Profile.ID }}" class="btn btn-success col-3 m-1">Edit</a>
+            <a href="/deleteprofile?id={{ .Profile.ID }}" class="btn btn-danger col-3 m-1">Delete</a>
+        </p>
+    </div>
+{{ end }}

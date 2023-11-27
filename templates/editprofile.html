@@ -1,0 +1,19 @@
+{{define "title"}} Edit - {{ .Profile.Name }}'s Profile {{end}}
+{{ define "content" }}
+<div class="row col-sm-4 m-3 d-flex flex-column justify-content-center align-items-center">
+    <h2 class="shadow-none p-3 mt-3 bg-light rounded">Edit {{ .Profile.Name }}'s Profile</h2>
+    <form action="/editprofile" method="post">
+        <input type="hidden" name="id" value="{{ .Profile.ID }}">
+        <label for="name" class="form-label">Name:</label>
+        <input class="form-control" type="text" name="name" id="name" value="{{ .Profile.Name }}" required><br>
+        <label for="name" class="form-label">Age:</label>
+        <input class="form-control" type="text" name="age" id="age" value="{{ .Profile.Age }}" required><br>
+        <label for="name" class="form-label">Occupation:</label>
+        <input class="form-control" type="text" name="occupation" id="occupation" value="{{ .Profile.Occupation }}" required><br>
+        <p class="d-flex flex-inline">
+            <a href="/profiles" class="btn btn-dark col-6 m-1">Back to Profiles</a>
+            <input type="submit" value="Update" class="btn btn-success col-6 m-1">
+        </p>
+    </form>
+</div>
+{{ end }}
